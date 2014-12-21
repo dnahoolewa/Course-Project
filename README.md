@@ -19,47 +19,47 @@
 ### Purpose
 This function implements Task #1 and Task #4.
 ### Arguments
-* set:  string    type of obseravations; expected values are "train" or "test"
+* set:    **string**    type of obseravations; expected values are "train" or "test"
 
 ### Return
-* X:    table     observation set with subject & activity variables appended.
+* X:      **table**     observation set with subject & activity variables appended.
 
 ### Description
-1. Create a *training* dataset consisting of:
+1. Create a ***training*** dataset consisting of:
    * measurements:  X_train.txt
    * activity data: y_train.txt       
    * subject data:  subject_train.txt
 
-2. Create a *test* dataset consisting of:
+2. Create a ***test*** dataset consisting of:
    * measurements:  X_test.txt
    * activity data: y_test.txt        
    * subject data:  subject_test.txt
 
-3. Combine the *test* dataset to the *training* dataset to complete this task.
+3. Combine the ***test*** and ***training*** datasets to complete this task.
 
 ## Function:  joinSets
 ### Purpose
 This function implements Task #1.
 ### Arguments
-* set1:      string       name of dataset, e.g. 'train'
-* set2:      string       name of dataset, e.g. 'test'
+* set1:      **string**    name of dataset, e.g. 'train'
+* set2:      **string**    name of dataset, e.g. 'test'
 
 ### Return
-* dataset:   table        a combined dataset
+* dataset:    **table**    a combined dataset
 
 ### Description
-1. Call the 'bindSets function for 'train' & 'test' datasets, respectively.
-2. Bind 'train' & 'test' datasets into a single dataset
+1. Call the ***bindSets*** function for **train** & **test** to create the respective datasets.
+2. Bind **train** & **test** datasets into a single dataset
 3. Return combined dataset
 
 ## Function:  selectVars
 ### Purpose
 This function implements Task #2.
 ### Arguments
-* colname:   string	column (i.e. variable) name pattern to find.
+* colname:    **string**    column (i.e. variable) name pattern to find.
 
 ### Return
-* keepVars:  logi vect	variables to keep for final proessing.
+* keepVars:    **logi vect**    variables to keep for final proessing.
 
 ### Description
 1. The descriptive variable names can be found in the 'features' object.
@@ -70,7 +70,7 @@ This function implements Task #2.
 ### Purpose
 This function implements Task #3.
 ### Arguments
-* activity_codes
+* activity_codes:    **string**    
 
 ### Description
 1. Read descriptive activity names in 'activity' table       
@@ -80,7 +80,7 @@ This function implements Task #3.
 ### Purpose
 This function implements Task #5.
 ### Arguments
-* myIds
+* myIds:    **string**    
 
 ### Return
 * Table of mean variables
