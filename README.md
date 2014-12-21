@@ -1,7 +1,4 @@
-Course-Project
-==============
-
-Getting & Cleaning Data:  Course Project
+# Getting & Cleaning Data:  Course Project #
 Author:  Dale Naho'olewa
 Date:  18 Dec 2014
 
@@ -21,13 +18,13 @@ Task #5. From the data set in step 4, create a second, independent tidy data set
 --- Function Prologues ---
 
 ## Function:  bindSets
-Purpose:
-	This function implements Task #1.
-Arguments:
+### Purpose:
+	This function implements Task #1 and Task #4.
+### Arguments:
         set:  string    type of obseravations; expected values are { "train", "test" }
-Return:
+### Return:
         X:    table     observation set with subject & activity variables appended.
-Description:
+### Description:
      We initially create two data-set: 
      1. a training dataset consisting of:
              measurements:  X_train.txt
@@ -42,50 +39,45 @@ Description:
 Finally, we will bind the test dataset to the training dataset to complete this task.
 
 ## Function:  joinSets
-Purpose:
+### Purpose:
 	This function implements Task #1.
-Argumets:
-	set1
-	set2
-Return:
-Description:
-        # Creating 'train' & 'test' datasets
-        train <- bindSets(set1)
-        test  <- bindSets(set2)
-        
-        # binding 'train' & 'test' datasets into a single dataset
-        dataset <- rbind(train, test)
-        dataset
+### Argumets:
+	set1:      string       name of dataset, e.g. 'train'
+	set2:      string       name of dataset, e.g. 'test'
+### Return:
+	dataset:   table        a combined dataset
+### Description:
+        # Call the 'bindSets function for 'train' & 'test' datasets, respectively.
+        # Bind 'train' & 'test' datasets into a single dataset
+        # return combined dataset
 
 ## Function:  selectVars
-Purpose:
+### Purpose:
 	This function implements Task #2.
-Arguments:
-	colname:	String	column (i.e. variable) name pattern to find.
-Return:
-	keepVars:	Logical	variables to keep for final proessing.
-                Vector
-Description:
+### Arguments:
+	colname:   string	column (i.e. variable) name pattern to find.
+### Return:
+	keepVars:  logical	variables to keep for final proessing.
+                   vector
+### Description:
         The descriptive variable names can be found in the 'features' object.
         Use the 'grep' function to find pattern in variable names.
-}
 
-## Function nameActivity:
-Purpose:
+## Function:  nameActivity
+### Purpose:
 	This function implements Task #3.
-Arguments:
+### Arguments:
 	activity_codes
-Description:
+### Description:
         Read descriptive activity names in 'activity' table       
         Create a list of descriptive 'activity_names' based on 		variable 'y' in dataset
 
 ## Function:  meanVars
-Purpose:
-	This function implements Task #5.
-Arguments:
+### Purpose:
+        This function implements Task #5.
+### Arguments:
 	myIds
-Return:
+### Return:
 	Table of mean variables
-Description:
+### Description:
 	Use melt and cast functions to summarize dataset variables.
-
