@@ -1,9 +1,8 @@
 # Summary of choices
+To Be Completed...
 # Study Design
+To Be Completed...
 # Instruction List
-A full description of this project is available at the project site where the data was obtained: 
-* http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
 Step 1:  Dowloaded the data for the project from the following URL: 
 * https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
@@ -19,7 +18,6 @@ Step 5: Start RStudio
 Step 6: Set the session working directory to the folder that contains the ***README.txt*** file.
 
 # Cookbook
-
 x	
 
 tBodyAcc-mean()-X
